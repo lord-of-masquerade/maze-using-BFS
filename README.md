@@ -1,2 +1,4 @@
 # maze-using-BFS
 A C++ implementation of a maze solver using the Breadth-First Search (BFS) algorithm to determine the shortest path from a source cell to a destination in a grid-based maze. The maze is modeled as a graph, and BFS ensures level-by-level traversal using a queue, guaranteeing optimal path discovery in an unweighted environment. This project demonstrates practical graph traversal and queue-based algorithm design aligned with core Data Structures concepts.
+<br>
+Author- Kamaldeep singh 
