@@ -10,7 +10,7 @@ void printMaze(int maze[5][5], int pathMark[5][5]) {
         for (int j = 0; j < 5; j++) {
 
             if (pathMark[i][j] && !(i == 0 && j == 0) && !(i == 4 && j == 4))
-                cout << "* ";
+                cout << " + ";
             else if (i == 0 && j == 0)
                 cout << "S ";
             else if (i == 4 && j == 4)
@@ -70,12 +70,6 @@ int main(){
     cout<< "Path: ";
     vector<pair<int,int>> path;
     
-    int pathMark[5][5]={0};
-
-    for (auto cell:path){
-        pathMark[cell.first][cell.second] = 1;
-    }
-    
     while (endx!=-1 && endy!=-1)
     {
         path.push_back({endx,endy});
@@ -84,7 +78,14 @@ int main(){
         endy=p.second;
     }
 
+     int pathMark[5][5]={0};
+
+    for (auto cell:path){
+        pathMark[cell.first][cell.second] = 1;
+    }
+
     cout << "\nMaze with shortest path:\n";
+    cout << " Path taken shown with \"+";
     printMaze(maze, pathMark);
     return 0;
 }
