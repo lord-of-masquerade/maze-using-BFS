@@ -84,9 +84,7 @@ int main(){
         endy=p.second;
     }
 
-    for(int i=path.size()-1;i>=0;i--){
-         cout << "\nMaze with shortest path:\n";
-         printMaze(maze, pathMark);
-    }
+    cout << "\nMaze with shortest path:\n";
+    printMaze(maze, pathMark);
     return 0;
 }
