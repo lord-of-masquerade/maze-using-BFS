@@ -10,7 +10,7 @@ void printMaze(int maze[5][5], int pathMark[5][5]) {
         for (int j = 0; j < 5; j++) {
 
             if (pathMark[i][j] && !(i == 0 && j == 0) && !(i == 4 && j == 4))
-                cout << " + ";
+                cout << "+ ";
             else if (i == 0 && j == 0)
                 cout << "S ";
             else if (i == 4 && j == 4)
@@ -85,7 +85,7 @@ int main(){
     }
 
     cout << "\nMaze with shortest path:\n";
-    cout << " Path taken shown with \"+";
+    cout << " Path taken shown with \"+\"\n";
     printMaze(maze, pathMark);
     return 0;
 }
