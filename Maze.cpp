@@ -9,14 +9,14 @@ void printMaze(int maze[5][5], int pathMark[5][5]) {
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
 
-            if (i == 0 && j == 0)
+            if (pathMark[i][j] && !(i == 0 && j == 0) && !(i == 4 && j == 4))
+                cout << "* ";
+            else if (i == 0 && j == 0)
                 cout << "S ";
             else if (i == 4 && j == 4)
                 cout << "E ";
             else if (maze[i][j] == 1)
                 cout << "# ";
-            else if (pathMark[i][j])
-                cout << "* ";
             else
                 cout << ". ";
         }
